@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import Image from "next/image";
 
 export default function Home() {
@@ -97,5 +98,28 @@ export default function Home() {
         </a>
       </footer>
     </div>
+=======
+import Link from "next/link";
+
+import { LatestPost } from "~/app/_components/post";
+import { api, HydrateClient } from "~/trpc/server";
+
+export default async function Home() {
+  const hello = await api.post.hello({ text: "from tRPC" });
+
+  void api.post.getLatest.prefetch();
+
+  return (
+    <HydrateClient>
+      <main className="flex min-h-screen flex-col text-white">
+        <div className="relative">
+          <div className="absolute top-0 h-32 w-full bg-gradient-to-b from-purple-950/60 to-transparent" />
+          <div className="z-10">
+            <h4 className="font-bold text-4xl">Skipp</h4>
+          </div>
+        </div>
+      </main>
+    </HydrateClient>
+>>>>>>> a411ec7 (t3 setup)
   );
 }
