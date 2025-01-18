@@ -51,7 +51,7 @@
     /* Path Aliases */
     "baseUrl": ".",
     "paths": {
-      "~/*": ["./src/*"]
+      "#/*": ["./src/*"]
     }
   },
   "include": [
