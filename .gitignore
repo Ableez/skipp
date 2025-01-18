@@ -3,7 +3,6 @@
 # dependencies
 /node_modules
 /.pnp
-<<<<<<< HEAD
 .pnp.*
 .yarn/*
 !.yarn/patches
@@ -12,16 +11,13 @@
 !.yarn/versions
 =======
 .pnp.js
->>>>>>> a411ec7 (t3 setup)
 
 # testing
 /coverage
 
-<<<<<<< HEAD
 # next.js
 /.next/
 /out/
-=======
 # database
 /prisma/db.sqlite
 /prisma/db.sqlite-journal
@@ -31,7 +27,6 @@ db.sqlite
 /.next/
 /out/
 next-env.d.ts
->>>>>>> a411ec7 (t3 setup)
 
 # production
 /build
@@ -46,25 +41,20 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-<<<<<<< HEAD
 # env files (can opt-in for committing if needed)
 .env*
-=======
 # local env files
 # do not commit any .env files to git, except for the .env.example file. https://create.t3.gg/en/usage/env-variables#using-environment-variables
 .env
 .env*.local
->>>>>>> a411ec7 (t3 setup)
 
 # vercel
 .vercel
 
 # typescript
 *.tsbuildinfo
-<<<<<<< HEAD
 next-env.d.ts
 =======
 
 # idea files
 .idea
->>>>>>> a411ec7 (t3 setup)
