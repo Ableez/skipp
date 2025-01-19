@@ -6,6 +6,7 @@ from team import Team
 import configs.league as scl
 
 
+
 class League:
     LEAGUE_TABLE_ATTRIBUTES = [
         "Club",
