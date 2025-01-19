@@ -1,6 +1,7 @@
 "use client";
-import React, { useCallback, useEffect, useState } from "react";
+import React, { useCallback } from "react";
 import { Button } from "../ui/button";
+import { useHomeTabStore } from "#/lib/zustand/home-tab";
 
 const tabs = [
   {
@@ -24,22 +25,15 @@ const tabs = [
 ];
 
 const TabButtons = () => {
-  const [activeTab, setActiveTab] = useState<string>(() => {
-    if (typeof localStorage !== "undefined") {
-      return localStorage.getItem("activeTab") || "live";
-    }
-    return "live";
-  });
+  const activeTab = useHomeTabStore((state) => state.activeTab);
+  const setActiveTab = useHomeTabStore((state) => state.setActiveTab);
 
-  const handleTabChange = useCallback((key: string) => {
-    setActiveTab(key);
-  }, []);
-
-  useEffect(() => {
-    if (typeof localStorage !== "undefined") {
-      localStorage.setItem("activeTab", activeTab);
-    }
-  }, [activeTab]);
+  const handleTabChange = useCallback(
+    (key: string) => {
+      setActiveTab(key);
+    },
+    [setActiveTab],
+  );
 
   return (
     <div className="mt-4 flex place-items-center justify-between align-middle">
@@ -48,7 +42,7 @@ const TabButtons = () => {
           key={tab.key}
           onClick={() => handleTabChange(tab.key)}
           variant={"ghost"}
-          className={`w-full border-b border-transparent bg-transparent ${
+          className={`w-full border-b font-bold text-base border-transparent bg-transparent ${
             activeTab === tab.key
               ? "border-purple-950 text-white"
               : "text-neutral-500"

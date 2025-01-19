@@ -22,7 +22,9 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          <TRPCReactProvider>{children}</TRPCReactProvider>
+          <div vaul-drawer-wrapper="">
+            <TRPCReactProvider>{children}</TRPCReactProvider>
+          </div>
         </ThemeProvider>
       </body>
     </html>
