@@ -18,7 +18,7 @@ To run this simulator locally, follow these steps:
 1. Clone the repository to your local machine:
 
     ```
-    git clone https://github.com/YourUsername/Football-Simulator.git
+    git clone https://github.com/AllenThomasDev/Football-Simulator.git
     ```
 
 2. Navigate to the main project directory:
