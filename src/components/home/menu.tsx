@@ -1,8 +1,14 @@
 import React from "react";
-import { Drawer, DrawerContent, DrawerTrigger } from "../ui/drawer";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerTrigger,
+} from "../ui/drawer";
 import { Button } from "../ui/button";
 import { DialogTitle } from "../ui/dialog";
 import Naira from "../naira";
+import Link from "next/link";
 
 const MenuDrawer = () => {
   return (
@@ -36,8 +42,15 @@ const MenuDrawer = () => {
             </svg>
           </Button>
         </DrawerTrigger>
-        <DrawerContent>
+        <DrawerContent className="mb-6 p-4">
           <DialogTitle>Ableez</DialogTitle>
+          <div className="mt-4 w-full">
+            <Link href={"/leagues"}>
+              <DrawerClose className="w-full rounded-2xl bg-white/5 p-3 text-left hover:bg-white/10">
+                All leagues
+              </DrawerClose>
+            </Link>
+          </div>
         </DrawerContent>
       </Drawer>
     </div>

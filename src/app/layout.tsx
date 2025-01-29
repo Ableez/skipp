@@ -22,9 +22,9 @@ export default function RootLayout({
           defaultTheme="dark"
           enableSystem={false}
         >
-          <div vaul-drawer-wrapper="">
-            <TRPCReactProvider>{children}</TRPCReactProvider>
-          </div>
+          {/* <div vaul-drawer-wrapper=""> enable for vaul drawer scale background feature: not usefull for now*/}
+          <TRPCReactProvider>{children}</TRPCReactProvider>
+          {/* </div> */}
         </ThemeProvider>
       </body>
     </html>

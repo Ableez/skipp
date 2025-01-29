@@ -20,13 +20,13 @@ const PlaceBetBar = () => {
 
   return (
     <div
-      className={`fixed ${bets.length > 0 ? "bottom-2" : "-bottom-44"} left-1/2 z-40 flex w-[96dvw] -translate-x-1/2 items-center justify-center gap-2 rounded-3xl border border-purple-900 bg-purple-900/50 px-4 py-4 backdrop-blur-md duration-300 transition-all ease-in-out`}
+      className={`fixed ${bets.length > 0 ? "bottom-2" : "-bottom-44"} left-1/2 z-40 flex w-[96dvw] -translate-x-1/2 items-center justify-center gap-2 rounded-3xl border border-purple-900 bg-purple-900/50 px-4 py-4 backdrop-blur-md transition-all duration-300 ease-in-out`}
     >
       <div className="w-[40%] rounded-2xl bg-purple-900 p-2 px-4 text-center text-sm">
         <span className="font-bold">Odds: {totalPrice.toFixed(2)}</span>
       </div>
 
-      <Drawer shouldScaleBackground>
+      <Drawer>
         <DrawerTrigger asChild>
           <Button className="w-[60%]">
             <svg

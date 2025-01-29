@@ -27,6 +27,24 @@ export default {
         },
       },
       keyframes: {
+        bounceRealistic: {
+          "0%": {
+            transform: "translateY(0)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "25%": {
+            transform: "translateY(100%)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "26%": {
+            transform: "translateY(96%) scaleY(0.8) scaleX(1.2)",
+            animationTimingFunction: "cubic-bezier(0.8, 0, 1, 1)",
+          },
+          "28%": {
+            transform: "translateY(80%) scaleY(0.9) scaleX(1.1)",
+            animationTimingFunction: "cubic-bezier(0, 0, 0.2, 1)",
+          },
+        },
         "accordion-down": {
           from: {
             height: "0",
@@ -47,6 +65,7 @@ export default {
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        "bounce-realistic": "bounceRealistic 1s infinite",
       },
     },
   },
